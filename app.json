@@ -1,14 +1,8 @@
 {
   "pages": [
-    "pages/beauty/beauty",
-    "pages/todolist/todo",
-    "pages/list/list",
-    "pages/index/index",
-    "pages/item/item",
-  
+    "pages/index/index"
    
-   
-    "pages/logs/logs"
+
   ],
   "permission": {
     "scope.userLocation": {
@@ -31,12 +25,14 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/board.png",
-        "selectedIconPath": "images/board-actived.png"
+        "iconPath": "images/profile-active.png",
+        "selectedIconPath": "images/avatar.png"
       },
       {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/profile-active.png",
+        "selectedIconPath": "images/avatar.png"
       }
     ]
   },

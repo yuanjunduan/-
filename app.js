@@ -1,5 +1,10 @@
 //app.js
 App({
+
+  config: {
+    apiBase: 'https://locally.uieee.com'
+  },
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
