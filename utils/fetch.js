@@ -14,3 +14,4 @@ module.exports = (url, data, method = 'GET', header = {}) => {
       complete: wx.hideLoading
     })
   })
+}

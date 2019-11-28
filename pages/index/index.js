@@ -1,4 +1,4 @@
-const fetch = require('../utils/fetch')
+const fetch = require('../../utils/fetch')
 
 Page({
   /**
@@ -12,33 +12,79 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-    // fetch('/slides')
-    //   .then(res => {
-    //     this.setData({ slides: res.data })
-    //   })
+  onLoad (options) {
+    fetch('/slides')
+      .then(res => {
+        this.setData({ slides: res.data })
+      })
 
-    // fetch('/categories')
-    //   .then(res => {
-    //     this.setData({ categories: res.data })
-    //   })
+    fetch('/categories')
+      .then(res => {
+        this.setData({ categories: res.data })
+      })
 
-    const slides = [
-      { image: 'http://ww1.sinaimg.cn/mw690/006ThXL5ly1fj7zx3w751j30u00dmgy3.jpg', link: '' },
-      { image: 'http://ww1.sinaimg.cn/mw690/006ThXL5ly1fj6ckx9tlwj30u00fqk8n.jpg', link: '/pages/list/list?cat=10' }
-    ]
+    // const slides = [
+    //   {
+    //     "id": 1,
+    //     "image": "http://ww1.sinaimg.cn/mw690/006ThXL5ly1fj7zx3w751j30u00dmgy3.jpg",
+    //     "link": ""
+    //   },
+    //   {
+    //     "id": 2,
+    //     "image": "http://ww1.sinaimg.cn/mw690/006ThXL5ly1fj6ckx9tlwj30u00fqk8n.jpg",
+    //     "link": "/pages/list/list?cat=10"
+    //   }
+    // ]
 
-    const categories = [
-      { icon: '/assets/icons/grid-01.png', text: '美食', category_id: 1 },
-      { icon: '/assets/icons/grid-02.png', text: '洗浴足疗', category_id: 2 },
-      { icon: '/assets/icons/grid-03.png', text: '结婚啦', category_id: 3 },
-      { icon: '/assets/icons/grid-04.png', text: '卡拉OK', category_id: 4 },
-      { icon: '/assets/icons/grid-05.png', text: '找工作', category_id: 5 },
-      { icon: '/assets/icons/grid-06.png', text: '辅导班', category_id: 6 },
-      { icon: '/assets/icons/grid-07.png', text: '汽车保养', category_id: 7 },
-      { icon: '/assets/icons/grid-08.png', text: '租房', category_id: 8 },
-      { icon: '/assets/icons/grid-09.png', text: '装修', category_id: 9 }
-    ]
+    // const categories = [
+    //   [
+    //     {
+    //       "id": 1,
+    //       "name": "美食",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i2onyj302u02umwz.jpg"
+    //     },
+    //     {
+    //       "id": 2,
+    //       "name": "洗浴足疗",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i2j4dj302u02umwy.jpg"
+    //     },
+    //     {
+    //       "id": 3,
+    //       "name": "结婚啦",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i56i0j302u02u744.jpg"
+    //     },
+    //     {
+    //       "id": 4,
+    //       "name": "卡拉OK",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i2uzvj302u02udfo.jpg"
+    //     },
+    //     {
+    //       "id": 5,
+    //       "name": "找工作",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i2rnlj302u02umwz.jpg"
+    //     },
+    //     {
+    //       "id": 6,
+    //       "name": "辅导班",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i2zloj302u02udfn.jpg"
+    //     },
+    //     {
+    //       "id": 7,
+    //       "name": "汽车保养",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i69eij302u02ua9w.jpg"
+    //     },
+    //     {
+    //       "id": 8,
+    //       "name": "租房",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i6j2lj302u02u0sj.jpg"
+    //     },
+    //     {
+    //       "id": 9,
+    //       "name": "装修",
+    //       "icon": "http://ww1.sinaimg.cn/large/006ThXL5ly1fj8w5i6z1pj302u02ua9u.jpg"
+    //     }
+    //   ]
+    // ]
 
     // this.setData({ slides, categories })
   }
